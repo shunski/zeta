@@ -1,4 +1,4 @@
-use alpha_core::{Zero, One, PID, Field};
+use alpha_core::{Zero, One, HalfBakedPID, Field};
 
 // Rational numbers
 #[derive(PartialEq, Eq, Copy, Clone)]
@@ -7,6 +7,9 @@ pub struct Rational {
     denumerator: u64,
     sign: bool,
 }
+
+#[derive(PartialEq, Copy, Clone)]
+pub struct C64(f64, f64);
 
 // Big unsigned integers
 #[derive(PartialEq, Eq, Clone)]
@@ -35,4 +38,4 @@ use omega_core::IdentityAlgorithm;
 pid_impl_for_fields!{ Rational }
 field_impl!{ Rational }
 
-mod factorization;
+mod integral;

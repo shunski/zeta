@@ -4,4 +4,4 @@ version = "0.0.0"
 edition = "2021"
 
 [dependencies]
-zeta_core = {path="../zeta_core"}
+zeta_core = {path="zeta_core"}

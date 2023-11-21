@@ -1,4 +1,4 @@
-use alpha_core::{Zero, One, HalfBakedPID, Field};
+use alpha_core::{Zero, One, PID, Field, Ring};
 
 // Rational numbers
 #[derive(PartialEq, Eq, Copy, Clone)]
@@ -35,6 +35,8 @@ mod rational_impl;
 use alpha_core::{pid_impl_for_fields, field_impl};
 use alpha_core::UniqueFactorization;
 use omega_core::IdentityAlgorithm;
+
+impl Ring for Rational {}
 pid_impl_for_fields!{ Rational }
 field_impl!{ Rational }
 
